@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const LeadForm = ({ onClose, source = "website" }) => {
   const [form, setForm] = useState({ name: "", email: "", company: "", sector: "" });
@@ -7,9 +8,23 @@ const LeadForm = ({ onClose, source = "website" }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
-    // Simulation d'envoi
-    await new Promise(r => setTimeout(r, 1000));
-    setStatus("success");
+try {
+        await emailjs.send(
+                  "service_90ed2de",
+                  "uz3egkd",
+          {
+                      from_name: form.name,
+                      from_email: form.email,
+                      company: form.company,
+                      plan: source,
+          },
+                  "TecTNcsFNCrZxOZoK"
+                );
+        setStatus("success");
+} catch (err) {
+        console.error(err);
+        setStatus("error");
+}
   };
 
   return (
