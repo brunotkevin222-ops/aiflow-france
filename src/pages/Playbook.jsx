@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import OverviewSection from "../components/playbook/OverviewSection";
 import PositioningSection from "../components/playbook/PositioningSection";
 import OffersSection from "../components/playbook/OffersSection";
