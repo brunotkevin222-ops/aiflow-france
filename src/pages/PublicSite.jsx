@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import LeadForm from "../components/LeadForm";
 
 const PublicSite = () => {
-  const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(null);h
 
   return (
     <div className="min-h-screen bg-white">
@@ -105,7 +105,7 @@ const PublicSite = () => {
                 <ul className="space-y-3 mb-8">
                   {offer.features.map((f, j) => <li key={j} className="flex gap-2 text-sm"><span className="text-[#002FA7]">✓</span>{f}</li>)}
                 </ul>
-                <button onClick={() => setShowForm(true)} className="w-full btn-primary text-center">
+                <button onClick={() => setShowForm(offer.name + " - " +offer.price)} className="w-full btn-primary text-center">
                   Démarrer →
                 </button>
               </div>
@@ -122,9 +122,10 @@ const PublicSite = () => {
         </div>
       </footer>
 
-      {showForm && <LeadForm onClose={() => setShowForm(false)} />}
+      {showForm && <LeadForm onClose={() => setShowForm(null)} source={showForm} />}
     </div>
   );
 };
 
 export default PublicSite;
+h
