@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import LeadForm from "../components/LeadForm";
 
 const PublicSite = () => {
-  const [showForm, setShowForm] = useState(null);h
+  const [showForm, setShowForm] = useState(null);
 
   return (
     <div className="min-h-screen bg-white">
