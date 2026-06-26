@@ -20,9 +20,9 @@ const PublicSite = () => {
             <a href="#faq" className="nav-link">FAQ</a>
             <Link to="/playbook" className="nav-link">Playbook ↗</Link>
           </div>
-          <button onClick={() => setShowForm(true)} className="btn-primary text-sm">
+          <a href="https://calendly.com/brunotkevin222/30min" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">
             Réserver un appel
-          </button>
+          </a>
         </div>
       </nav>
 
@@ -44,9 +44,9 @@ const PublicSite = () => {
               Vos concurrents courent encore. Vous, vous avez déjà gagné.
             </p>
             <div className="mt-10 flex gap-4">
-              <button onClick={() => setShowForm(true)} className="btn-primary text-base px-8 py-4">
+              <a href="https://calendly.com/brunotkevin222/30min" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
                 Audit IA Gratuit →
-              </button>
+              </a>
               <Link to="/playbook" className="px-8 py-4 border-2 border-gray-900 font-semibold text-gray-900 hover:bg-gray-900 hover:text-white transition-colors">
                 Voir le Playbook
               </Link>
